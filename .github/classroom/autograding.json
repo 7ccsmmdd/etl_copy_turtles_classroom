@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "ETL Copy Transformation",
+      "setup": "",
+      "run": "mvn -q -B -DfailIfNoTests=false -Dtest=ETLCopyTest verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}

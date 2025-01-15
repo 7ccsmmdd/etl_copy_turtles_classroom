@@ -1,0 +1,25 @@
+// TODO: Your transformation code goes here...
+
+// Use this operation to translate pen states. For example if s is a PenMoveStatement you could write s.state.toTargetPenState() to generate the corresponding pen state in the target model.
+operation Any toTargetPenState() {
+    switch (self) {
+        case Source!PenState#up: return Target!PenState#up;
+        case Source!PenState#down: return Target!PenState#down;
+    }
+}
+
+// Use this operation to translate move commands. For example if s is a MoveStatement you could write s.command.toTargetMoveCommand() to generate the corresponding move command in the target model.
+operation Any toTargetMoveCommand() {
+    switch (self) {
+        case Source!MoveCommand#forward: return Target!MoveCommand#forward;
+        case Source!MoveCommand#backward: return Target!MoveCommand#backward;
+    }
+}
+
+// Use this operation to translate turn commands. For example if s is a TurnStatement you could write s.command.toTargetTurnCommand() to generate the corresponding turn command in the target model.
+operation Any toTargetTurnCommand() {
+    switch (self) {
+        case Source!TurnCommand#left: return Target!TurnCommand#left;
+        case Source!TurnCommand#right: return Target!TurnCommand#right;
+    }
+}
